@@ -18,8 +18,8 @@ public class ExceptionInstrumentedTest {
   @BeforeClass
   public static void extractPDFs() {
     final Context ctx = InstrumentationRegistry.getInstrumentation().getTargetContext();
-    ReLinker.loadLibrary(ctx, "thrower-lib");
-    ReLinker.loadLibrary(ctx, "native-lib");
+    ReLinker.loadLibrary(ctx, "thrower");
+    ReLinker.loadLibrary(ctx, "catcher");
   }
 
   @Test

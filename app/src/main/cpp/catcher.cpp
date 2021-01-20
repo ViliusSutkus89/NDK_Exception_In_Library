@@ -1,5 +1,5 @@
 #include <jni.h>
-#include "thrower-lib.h"
+#include "thrower.h"
 
 extern "C" JNIEXPORT jboolean JNICALL
 Java_com_viliussutkus89_exceptioner_ExceptionInstrumentedTest_throwRuntimeError(__attribute__((unused)) JNIEnv *env,

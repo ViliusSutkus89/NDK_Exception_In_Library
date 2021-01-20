@@ -8,7 +8,7 @@ SET(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic")
 set(CMAKE_C_STANDARD 11)
 SET(CMAKE_C_FLAGS "-Wall -Wextra -pedantic")
 
-add_library(thrower-lib SHARED thrower-lib.cpp)
-add_library(native-lib SHARED native-lib.cpp)
+add_library(thrower SHARED thrower.cpp)
+add_library(catcher SHARED catcher.cpp)
 
-target_link_libraries(native-lib thrower-lib)
+target_link_libraries(catcher thrower)

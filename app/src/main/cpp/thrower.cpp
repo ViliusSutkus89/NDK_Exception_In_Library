@@ -1,4 +1,4 @@
-#include "thrower-lib.h"
+#include "thrower.h"
 
 void lib_throwRuntimeError() {
   throw std::runtime_error("throwing lib::std::runtime_error 2");
