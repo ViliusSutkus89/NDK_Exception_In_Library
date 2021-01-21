@@ -2,7 +2,6 @@ package com.viliussutkus89.exceptioner;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -10,8 +9,7 @@ import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
 public class ExceptionInstrumentedTest {
-  @BeforeClass
-  public static void extractPDFs() {
+  static {
     System.loadLibrary("c++_shared");
     System.loadLibrary("thrower");
     System.loadLibrary("catcher");
