@@ -12,6 +12,7 @@ import static org.junit.Assert.assertTrue;
 public class ExceptionInstrumentedTest {
   @BeforeClass
   public static void extractPDFs() {
+    System.loadLibrary("c++_shared");
     System.loadLibrary("thrower");
     System.loadLibrary("catcher");
   }
