@@ -1,11 +1,6 @@
 package com.viliussutkus89.exceptioner;
 
-import android.content.Context;
-
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import androidx.test.platform.app.InstrumentationRegistry;
-
-import com.getkeepsafe.relinker.ReLinker;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -17,9 +12,8 @@ import static org.junit.Assert.assertTrue;
 public class ExceptionInstrumentedTest {
   @BeforeClass
   public static void extractPDFs() {
-    final Context ctx = InstrumentationRegistry.getInstrumentation().getTargetContext();
-    ReLinker.loadLibrary(ctx, "thrower");
-    ReLinker.loadLibrary(ctx, "catcher");
+    System.loadLibrary("thrower");
+    System.loadLibrary("catcher");
   }
 
   @Test
